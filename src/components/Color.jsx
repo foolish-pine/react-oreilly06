@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
-import { ColorContext } from "../provider/ColorProvider";
+import React from "react";
+import { useColors } from "../provider/ColorProvider";
 import { StarRating } from "./StarRating";
 
 import { FaTrash } from "react-icons/fa";
 
 export const Color = ({ id, title, color, rating }) => {
-  const { removeColor, rateColor } = useContext(ColorContext);
+  const { removeColor, rateColor } = useColors();
   return (
     <section>
       <h1>{title}</h1>
